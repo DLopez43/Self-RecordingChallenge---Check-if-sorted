@@ -15,10 +15,21 @@ function checkIfSorted(arr) {
   //output bool
 }
 
+function checkIfSorted1(arr) {
+  //input arr
+  if(arr.length === 0)return true;
+  let test = arr[0];
+  for(let i = 1; i< arr.length; i++){
+    if(test > arr[i]) return false;
+    else test = arr[i];
+
+  }
+  return true;
+}
 // --- Starter Test Cases ---
-console.log(checkIfSorted([1, 2, 3, 4])); // true
-console.log(checkIfSorted([1, 3, 2, 4])); // false
-console.log(checkIfSorted([]));
+console.log(checkIfSorted1([1, 2, 3, 4])); // true
+console.log(checkIfSorted1([1, 3, 2, 4])); // false
+console.log(checkIfSorted1([]));
 // --- Your Turn ---
 // Add at least 2 more test cases and explain them out loud in your recording.
 
