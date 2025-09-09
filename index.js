@@ -6,10 +6,11 @@
 
 function checkIfSorted(arr) {
   //input arr
+  if(!arr.length)return true;
   const sorted = arr.slice().sort((a,b)=> a-b).join();//create a var to hold sorted array join?
   console.log(sorted);
   console.log(arr.join());
-  return arr.join()=== sorted//compare the input arr against sorted 
+  return arr.join()=== sorted;//compare the input arr against sorted 
   //check if sorted
   //output bool
 }
@@ -17,7 +18,7 @@ function checkIfSorted(arr) {
 // --- Starter Test Cases ---
 console.log(checkIfSorted([1, 2, 3, 4])); // true
 console.log(checkIfSorted([1, 3, 2, 4])); // false
-
+console.log(checkIfSorted([]));
 // --- Your Turn ---
 // Add at least 2 more test cases and explain them out loud in your recording.
 
